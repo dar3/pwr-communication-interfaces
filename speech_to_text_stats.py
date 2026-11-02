@@ -6,7 +6,7 @@ from pathlib import Path
 import jiwer
 import whisper
 
-AUDIO_EXTENSIONS = {".wav", ".mp3"}
+AUDIO_EXTENSIONS = {".wav", ".mp3", ".m4a"}
 
 
 def find_audio_files(root):
@@ -100,6 +100,6 @@ def process_audio_files(base_directory, output_csv="wyniki_transkrypcji.csv", mo
 
 if __name__ == "__main__":
     KATALOG_GLOWNY = "./recordings_stt"
-    PLIK_WYNIKOWY = "wyniki_transkrypcji.csv"
+    PLIK_WYNIKOWY = "transcription_stats.csv"
 
-    process_audio_files(KATALOG_GLOWNY, output_csv=PLIK_WYNIKOWY, model_size="tiny")
+    process_audio_files(KATALOG_GLOWNY, output_csv=PLIK_WYNIKOWY, model_size="medium")

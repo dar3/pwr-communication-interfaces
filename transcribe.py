@@ -7,7 +7,7 @@ data_dir = Path("recordings_stt")
 AUDIO_EXTENSIONS = {".wav", ".mp3", ".m4a"}
 
 
-model = whisper.load_model("tiny", device="cuda")
+model = whisper.load_model("medium", device="cuda")
 
 
 def find_audio_files(root):

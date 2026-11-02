@@ -5,11 +5,11 @@ import sounddevice as sd
 import numpy as np
 
 # Audio settings
-SAMPLE_RATE = 16000  # Whisper expects a 16kHz sample rate
-DURATION = 3  # Transcribe in 3-second blocks
+SAMPLE_RATE = 16000
+DURATION = 3
 BLOCK_SIZE = SAMPLE_RATE * DURATION
 
-# Queue to hold audio chunks
+
 audio_queue = queue.Queue()
 
 
